@@ -1,0 +1,13 @@
+<div id="recettes_accueil">
+    {% for recette in recettes %}
+        <a href="{{ path('', {id: recette.id})  }}">
+            <div class="recette">
+                <img src="{{ recette.photo }}" alt="Image recette">
+                <div class="titre_recette">
+                    <h2>{{ recette.titre }}</h2>
+                    {% include 'partials/_note.html.twig' %}
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+</div>

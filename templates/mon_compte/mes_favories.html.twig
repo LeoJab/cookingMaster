@@ -1,0 +1,17 @@
+{% extends "mon_compte/index.html.twig" %}
+
+{% block section %}
+    <div id="recettes_accueil">
+        {% for fav in recettes_favs %}
+            <a href="{{ path('details_recette', {id: fav.recette.id})  }}">
+                <div class="recette">
+                    <img src="{{ fav.recette.photo }}" alt="Image recette">
+                    <div class="titre_recette">
+                        <h2>{{ fav.recette.titre }}</h2>
+                        {% include 'partials/_note.html.twig' with { recette: fav.recette } %}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

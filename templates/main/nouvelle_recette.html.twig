@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div id="all_accueil">
+        <div id="all_recettes_accueil">
+            <ul id="nav_accueil">
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Apéritifs'})  }}" class="active">Apéritifs</a></li>
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Entrées'})  }}" class="active">Entrées</a></li>
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Plats'})  }}" class="active">Plats</a></li>
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Désserts'})  }}" class="active">Désserts</a></li>
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Boissons'})  }}" class="active">Boissons</a></li>
+                <li><a href="{{ path('nouvelle_recette', {categorie: 'Petit déjeuné'})  }}" class="active">Petit déjeuné</a></li>
+            </ul>
+
+            <div id="recettes_accueil">
+                {% include "partials/_recette.html.twig" %}
+            </div>
+        </div>
+
+        <div id="droite_accueil">
+            <div id="recherche">
+                <div id="titres">
+                    <h2>Rechercher une recette</h2>
+                    <h3>Dans mon frigo</h3>
+                </div>
+                <div id="formulaire">
+                    <form action="">
+                        <input class="champ" type="text" placeholder="Ingrédient..">
+                        <input class="champ" type="text" placeholder="Ingrédient..">
+                        <input class="champ" type="text" placeholder="Ingrédient..">
+
+                        <input class="btn" type="submit" placehorlder="Rechercher">
+                    </form>
+                </div>
+            </div>
+            <div id="all_nouvelles_recettes_accueil">
+                <h2 id="titre">Nouvelles recettes</h2>
+                <div id="nouvelles_recettes_accueil">
+                    {% for recette in nouvellesRecettes %}
+                        <a href="#">
+                            <div class="recette">
+                                <img src="{{ recette.photo }}" alt="Image recette">
+                                <div class="titre_recette">
+                                    <h3>{{ recette.titre }}</h3>
+                                    {% include 'partials/_note.html.twig' %}
+                                    <div class="ingredients">
+                                        {% for compose in recette.composes %}
+                                            <div class="ingredient">
+                                                {{ compose.ingredient.nom }}, 
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

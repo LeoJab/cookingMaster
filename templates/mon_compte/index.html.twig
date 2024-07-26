@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div id="all_mon_compte">
+    <div id="mon_compte">
+        <div id="mon_compte_top">
+            <h1>Mon compte</h1>
+            <div id="pp_prenom">
+                <img src="{{ asset('assets/img/uploads/pp/') ~ app.user.pp }}" alt="Photo de profil">
+                <p>{{ app.user.nom }}  {{ app.user.prenom }}</p>
+            </div>
+            <ul>
+                <li><a href="{{ path('mes_infos') }}">Mes informations</a></li>
+                <li><a href="{{ path('mes_recettes') }}">Mes recettes</a></li>
+                <li><a href="{{ path('mes_favories') }}">Mes favories</a></li>
+                <li><a href="{{ path('mes_commentaires') }}">Mes commentaires</a></li>
+            </ul>
+        </div>
+        {% block section %}{% endblock %}
+    </div>
+</div>
+    
+{% endblock %}
+

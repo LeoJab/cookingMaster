@@ -1,0 +1,1046 @@
+body {
+    margin: 0;
+    position: relative;
+    top: 120px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+}
+
+#top_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 25px 0px 25px;
+}
+
+#top_header #image, #icons{
+    width: 20%;
+}
+
+#top_header #formulaire{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+#top_header img{
+    width: 70px;
+    height: 70px;
+}
+
+#top_header #form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #F1FAEE;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+#top_header #form button, input, input[type=text]:focus{
+    border: none;
+    background-color: white;
+    outline: none;
+    color: #909090;
+}
+
+#top_header #form button{
+    width: 3%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#top_header #form svg{
+    color: #909090;
+}
+
+#top_header #form input{
+    font-size: 22px;
+    width: 93%;
+    height: 90%;
+}
+
+#top_header #icons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#top_header #icons svg {
+    color: #E63946;
+}
+
+#bot_header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #E8E8E8;
+    padding: 8px 0;
+}
+
+.active:active {
+    color: #EC9A9A !important;
+    border-bottom: 2px solid #EC9A9A;
+}
+
+#bot_header a, #bot_header p {
+    display: flex;
+    text-decoration: none;
+    color: #457B9D;
+    font-size: 25px;
+    font-family: 'Kufam';
+    margin: 0 10px;
+}
+
+.none {
+    display: none;
+}
+
+.btnCateHeader {
+    cursor: pointer;
+}
+
+#menu_categorie {
+    position: fixed;
+    right: 650px;
+    top: 124px;
+    padding-right: 10px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+#menu_categorie ul {
+    list-style: none;
+    padding-left: 5px;
+    margin: 0;
+}
+
+#menu_categorie a {
+    text-decoration: none;
+    color: #1D3557;
+    font-size: 24px;
+    font-family: 'Kufam';
+}
+
+#menu_user {
+    position: fixed;
+    right: 0;
+    top: 55px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+#menu_user ul {
+    list-style: none;
+}
+
+#menu_user a {
+    text-decoration: none;
+    color: #1D3557;
+    font-size: 24px;
+    font-family: 'Kufam';
+}
+
+#icons .icon {
+    cursor: pointer;
+}
+
+#menu_trait {
+    position: fixed;
+    right: 0;
+    top: 55px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+#menu_trait ul {
+    list-style: none;
+}
+
+#menu_trait a {
+    text-decoration: none;
+    color: #1D3557;
+    font-size: 24px;
+    font-family: 'Kufam';
+}
+
+/* FOOTER */
+#all_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1FAEE;
+    gap: 160px;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+#all_footer #gauche {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+#all_footer #gauche h2 {
+    color: #EC9A9A;
+    font-family: 'Kufam';
+    font-size: 24px;
+    margin: 0;
+}
+
+#all_footer #gauche li {
+    margin: 4px 0;
+}
+
+#all_footer #gauche a {
+    text-decoration: none;
+    color: #1D3557;
+    font-family: 'Kufam';
+    font-size: 18px;
+}
+
+#all_footer #gauche ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#all_footer #gauche #categorie #list {
+    display: flex;
+    flex-direction: row;
+}
+
+#all_footer #droite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#all_footer #droite img {
+    width: 73px;
+}
+
+#all_footer #droite #reseaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    color: #F1FAEE;
+}
+
+#all_footer #droite #reseaux div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EC9A9A;
+    border-radius: 20px;
+    padding: 7px;
+}
+
+/* ACCUEIL */
+#all_accueil {
+    display: flex;
+    justify-content: start;
+    margin-left: 250px;
+    gap: 5%;
+    margin-top: 50px;
+}
+
+#all_recettes_accueil {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    background-color: #F1FAEE;
+    border-radius: 20px;
+}
+
+#droite_accueil {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    gap: 20px;
+    position: fixed;
+    top: 170px;
+    right: 250px;
+}
+
+#droite_accueil #all_nouvelles_recettes_accueil, #droite_accueil #recherche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1FAEE;
+    border-radius: 10px;
+}
+
+#all_nouvelles_recettes_accueil #titre {
+    margin: 10px 0;
+}
+
+#nav_accueil {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    border-bottom: 2px solid #457B9D;
+    padding: 0 25px;
+}
+
+#nav_accueil a {
+    text-decoration: none;
+    font-family: 'Kufam';
+    color: #457B9D;
+    font-size: 28px;
+}
+
+#recettes_accueil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#recettes_accueil a {
+    width: 30%;
+    text-decoration: none;
+}
+
+#recettes_accueil .recette {
+    width: 100%;
+    background-color:rgba(168, 218, 220, 0.15);
+    border-radius: 15px 15px 15px 15px;
+}
+
+#recettes_accueil img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+#recettes_accueil .recette p, .recette h2 {
+    font-family: 'Kufam';
+    color: #1D3557;
+    font-weight: 500;
+}
+
+#recettes_accueil .recette h2 {
+    text-wrap: nowrap;
+    font-size: 18px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#recettes_accueil .titre_recette {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.recette_notation {
+    display: flex;
+    flex-direction: row;
+}
+
+.recette_notation p {
+    margin: 0;
+    color: #457B9D;
+}
+
+.recette_notation svg {
+    color: yellow;
+}
+
+#all_nouvelles_recettes_accueil {
+    padding: 5px 5px 5px 5px;
+}
+
+#nouvelles_recettes_accueil img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#nouvelles_recettes_accueil .recette h2 {
+    text-wrap: nowrap;
+    font-size: 14px;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Kufam";
+    color: #457B9D;
+}
+
+#nouvelles_recettes_accueil a {
+    text-decoration: none;
+    width: 100%;
+}
+
+#nouvelles_recettes_accueil .recette {
+    display: flex;
+    flex-direction: row;
+    background-color:rgba(168, 218, 220, 0.15);
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#nouvelles_recettes_accueil .titre_recette {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 2px;
+}
+
+#nouvelles_recettes_accueil .ingredients {
+    display: flex;
+    flex-direction: row;
+}
+
+#nouvelles_recettes_accueil .ingredient {
+    font-family: 'Kufam';
+    font-size: 10px;
+    color: #457B9D;
+}
+
+#droite_accueil #recherche #titres h2, 
+#droite_accueil #recherche #titres h3, 
+#droite_accueil #all_nouvelles_recettes_accueil h2 {
+    font-family: "Kufam";
+    color: #1D3557;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+
+#droite_accueil #all_nouvelles_recettes_accueil h3 {
+    text-wrap: nowrap;
+    font-size: 14px;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Kufam";
+    color: #457B9D;
+    font-weight: 400;
+}
+
+#droite_accueil #formulaire {
+    width: 100%;
+}
+
+#droite_accueil #formulaire form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#droite_accueil #formulaire .champ {
+    background-color: rgb(212, 212, 212, 0.3);
+    color: #909090;
+    font-size: 14px;
+    font-family: "Kufam";
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#droite_accueil #formulaire .btn {
+    background-color: #EC9A9A;
+    font-size: 24px;
+    font-family: "Kufam";
+    color: #F1FAEE;
+    padding: 5px;
+    width: 50%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#droite_accueil #recherche {
+    padding: 10px;
+}
+
+
+/* DETAILS RECETTE */
+#all_details_recette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#details_recette {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    background-color: #F1FAEE;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#details_recette #titre_note {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#details_recette #titre_note h1 {
+    font-family: 'Kufam';
+    color: #1D3557;
+    font-size: 35px;
+    margin: 0;
+}
+
+#details_recette #titre_note .recette_notation {
+    font-size: 28px;
+}
+
+#details_recette #titre_note svg {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 10px;
+}
+
+#details_recette #photo_info_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details_recette #photo_info_btn #photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details_recette #photo_info_btn #photo #principale {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#details_recette #photo_info_btn #photo .secondaire {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+}
+
+#details_recette #photo_info_btn #photo .secondaire img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+#details_recette #photo_info_btn #info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#details_recette #photo_info_btn #info p {
+    color: #EC9A9A;
+    font-family: 'Kufam';
+    font-size: 24px;
+    margin: 0;
+}
+
+#details_recette #photo_info_btn #info svg {
+    width:24px;
+    height:24px;
+}
+
+#details_recette #photo_info_btn #btn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#details_recette #photo_info_btn #btn #like {
+    display: flex;
+    align-items: center;
+    background-color: #F1FAEE;
+    border: 2px solid #EC9A9A;
+    color: #EC9A9A;
+    font-family: 'Kufam';
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+#details_recette #photo_info_btn #btn #partage {
+    display: flex;
+    align-items: center;
+    background-color: #F1FAEE;
+    border: 2px solid #1D3557;
+    color: #1D3557;
+    font-family: 'Kufam';
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+#details_recette #photo_info_btn #btn svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+}
+
+#details_recette #photo_info_btn #btn a {
+    text-decoration: none;
+}
+
+#details_recette #photo_info_btn #btn #like, #details_recette #photo_info_btn #btn #partage {
+    cursor: pointer;
+}
+
+#desc_ing_etape_com h2 {
+    font-family: 'Kufam';
+    color: #1D3557;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0;
+}
+
+#desc_ing_etape_com #desc #contenue {
+    font-family: 'Kufam';
+    color: #1D3557;
+    font-size: 18px;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers {
+    display: flex;
+    flex-direction: row;
+    color: #1D3557;
+    font-size: 24px;
+    font-family: 'Kufam';
+    margin-bottom: 10px;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers #pers {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0 5px;
+    background-color: white;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers p {
+    margin: 0;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers .btn {
+    background-color: #EC9A9A;
+    color: white;
+    font-size: 28px;
+    border: 0;
+    cursor: pointer;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers .btnPlus {
+    border-radius: 5px 0 0 5px;
+}
+
+#desc_ing_etape_com #btn_ing #btn_pers .btnMoins {
+    border-radius: 0 5px 5px 0;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing .info {
+    font-family: 'Kufam';
+    color: #1D3557;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing .info .titre {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing .info .qte_u {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+}
+
+#desc_ing_etape_com #btn_ing #all_ing .ing .info .qte_u p {
+    margin: 0;
+}
+
+#desc_ing_etape_com #etapes .etape {
+    font-family: 'Kufam';
+    color: #1D3557;
+    margin: 10px 0;
+}
+
+#desc_ing_etape_com #etapes .etape .titre_ing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#desc_ing_etape_com #etapes .etape .titre_ing p {
+    margin: 0;
+    font-size: 20px;
+}
+
+#desc_ing_etape_com #etapes .etape .titre_ing img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#desc_ing_etape_com #etapes .etape .contenue {
+    margin: 0;
+    margin-top: 8px;
+}
+
+#desc_ing_etape_com #commentaires #all_com {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+#desc_ing_etape_com #commentaires #all_com .commentaire {
+    width: 48%;
+    font-family: 'Kufam';
+    color: #1D3557;
+}
+
+#desc_ing_etape_com #commentaires #all_com .commentaire .pp_nom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#desc_ing_etape_com #commentaires #all_com .commentaire .pp_nom p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+#desc_ing_etape_com #commentaires #all_com .commentaire .pp_nom img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#desc_ing_etape_com #commentaires #all_com .commentaire .contenue {
+    font-size: 16px;
+}
+
+#titre_ligne { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: 50px 0 15px 0;
+} 
+
+#titre_ligne hr { 
+    flex: 0 0 70%;
+    border: none;
+    border-bottom: 2px solid #1D3557;
+    margin-right: 5px;
+}
+
+#recette_sim #titre {
+    text-align: center;
+    color: #EC9A9A !important;
+    border-bottom: 2px solid #EC9A9A !important;
+    margin: 30px 0 10px 0;
+}
+
+/* FORMULAIRE CONNEXION/INSCRIPTION */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.form #inscription, .form #connexion, .form #mes_infos {
+    background-color: #F1FAEE;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.form #inscription h1, .form #connexion h1, .form #mes_infos h1 {
+    color: #1D3557;
+    font-size: 35px;
+    font-family: 'Kufam';
+    margin: 0 0 10px 0;
+}
+
+.form #inscription form, .form #connexion form, .form #mes_infos form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form #inscription .label_input, .form #connexion .label_input, .form #mes_infos .label_input {
+    display: flex;
+    flex-direction: row;
+}
+
+.form #inscription .label_input div, .form #connexion .label_input div, .form #mes_infos .label_input div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form #inscription label, .form #connexion label, .form #mes_infos label {
+    font-size: 24px;
+    color: #1D3557;
+    font-family: 'Kufam';
+}
+
+.form #inscription input, .form #connexion input, .form #mes_infos input {
+    width: 90%;
+    font-size: 18px;
+    color: #1D3557;
+    border: 2px solid #c2c2c2;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Kufam';
+    margin: 0;
+}
+
+.form #inscription #registration_form_ddn, .form #mes_infos #update_info_user_ddn {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.form #inscription #registration_form_ddn select, .form #mes_infos #update_info_user_ddn select {
+    color: #1D3557;
+    border: 2px solid #c2c2c2;
+    background-color: #D9D9D9;
+    font-size: 20px;
+    font-family: 'Kufam';
+    border-radius: 5px;
+}
+
+.form #inscription #registration_form_pp {
+    padding: 0;
+    color: #1D3557;
+    border: 2px solid #c2c2c2;
+    background-color: #D9D9D9;
+    font-size: 20px;
+    font-family: 'Kufam';
+    border-radius: 5px;
+}
+
+.form #inscription #therme div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form #inscription #therme div input {
+    width: 2.5%;
+}
+
+.form #inscription #btn, .form #connexion #btn, .form #mes_infos .btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form #inscription #btn button, .form #connexion #btn button, .form #mes_infos .btn button {
+    background-color: #EC9A9A;
+    border: none;
+    font-size: 30px;
+    color: #F1FAEE;
+    font-family: 'Kufam';
+    width: 25%;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.form #inscription #btn a, .form #connexion #btn a, .form #mes_infos .btn a {
+    text-decoration: none;
+    color: #1D3557;
+    font-family: 'Kufam';
+    font-size: 14px;
+}
+
+/* MON COMPTE */
+#all_mon_compte {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#mon_compte {
+    background-color: #F1FAEE;
+    border-radius: 20px;
+    width: 70%;
+    padding: 25px;
+}
+
+#mon_compte #mon_compte_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mon_compte #mon_compte_top h1 {
+    color: #1D3557;
+    font-size: 35px;
+    font-family: 'Kufam';
+    margin: 0 0 10px 0;
+    font-weight: 400;
+}
+
+#mon_compte #mon_compte_top img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#mon_compte #mon_compte_top #pp_prenom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #1D3557;
+    font-family: 'Kufam';
+    font-size: 30px;
+    gap: 20px;
+}
+
+#mon_compte #mon_compte_top ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    border-bottom: 2px solid #1D3557;
+    margin: 20px 0 10px 0;
+    padding: 0;
+}
+
+#mon_compte #mon_compte_top li a {
+    text-decoration: none;
+    color: #1D3557;
+    font-family: 'Kufam';
+    font-size: 26px;
+}
+
+#mon_compte .form {
+    margin-top: 20px;
+}
+
+#all_mon_compte #mon_compte .form .mdp button {
+    width: 50%;
+}
+
+#all_mon_compte #mon_compte .form .mes_infos {
+    padding: 0;
+}
+
+.all_compte_com {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(217, 217, 217, 0.3) !important;
+    border-radius: 10px 10px 0 0;
+}
+
+.compte_com {
+    width: 100% !important;
+}
+
+.com_link {
+    background-color: #EC9A9A;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.com_link a {
+    color: #F1FAEE;
+    font-family: 'Kufam';
+    font-size: 18px;
+}
+
+#all_mon_compte #recettes_accueil .all_recette {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+}
+
+#all_mon_compte #recettes_accueil .all_recette a {
+    width: 100%;
+}
+
+#all_mon_compte #recettes_accueil .all_recette .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #EC9A9A;
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+    height: 20%;
+}
+
+#all_mon_compte #recettes_accueil .all_recette .icons .icon {
+    color: #F1FAEE;
+    width: 20px;
+    height: 20px;
+}

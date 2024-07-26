@@ -1,0 +1,29 @@
+{% extends "mon_compte/index.html.twig" %}
+
+{% block section %}
+<div id="all_details_recette">
+    <div id="details_recette">
+        <div id="desc_ing_etape_com">
+            <!-- COMMENTAIRES -->
+            <div id="commentaires">
+                <div id="all_com">
+                    {% for commentaire in commentaires %}
+                        <div class="all_compte_com">
+                            <div class="commentaire compte_com">
+                                <div class="pp_nom">
+                                    <img src="{{ asset('assets/img/uploads/pp/') ~ app.user.pp }}" alt="Photo de profil">
+                                    <p>{{ commentaire.utilisateur.nom }}</p>
+                                </div>
+                                <p class="contenue">{{ commentaire.contenue }}</p>
+                            </div>
+                            <div class="com_link">
+                                <a href="{{ path('details_recette', {id: commentaire.recette.id })  }}">Voir la recette</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

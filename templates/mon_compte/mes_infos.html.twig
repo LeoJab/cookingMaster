@@ -1,0 +1,37 @@
+{% extends 'mon_compte/index.html.twig' %}
+
+{% block title %}Mes informations{% endblock %}
+    
+{% block section %}
+    <div class="form">
+        <div id="mes_infos">
+            {{ form_start(form) }}
+                <div class="label_input">
+                    {{ form_row(form.nom) }}
+                    {{ form_row(form.prenom) }}
+                </div>
+                <div class="label_input">
+                    <div>
+                        <label>Email</label>
+                        <input type="text" placeholder="{{ app.user.email }}" disabled>
+                    </div>
+                    {{ form_row(form.ddn) }}
+                </div>
+
+                <div class="btn">
+                    <button type="submit">Modifier</button>
+                </div>
+            {{ form_end(form) }} 
+
+            {{ form_start(formPassWord) }}
+                <div class="label_input">
+                    {{ form_row(formPassWord.plainPassword) }}
+                </div>
+
+                <div class="btn mdp">
+                    <button type="submit">Modifier Mot de passe</button>
+                </div>
+            {{ form_end(formPassWord) }} 
+        </div>
+    </div>
+{% endblock %}

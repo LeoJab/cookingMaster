@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Details Produit{% endblock %}
+
+{% block body %}
+    <div id="all_details_recette">
+        <div id="details_recette">
+            <div id="titre_note">
+                <h1>{{ details_recette.titre }}</h1>
+                {% include 'partials/_note.html.twig' with { recette: details_recette } %}
+            </div>
+            <!-- PHOTOS -->
+            <div id="photo_info_btn">
+                <div id="photo">
+                    <img id="principale" src="{{ details_recette.photo }}" alt="Photo recette">
+                    <div class="secondaire">
+                        {% for photo in details_recette.photos %}
+                            <img src="{{ photo.url }}" alt="Photos recette">
+                        {% endfor %}
+                    </div>
+                </div>
+                <div id="info">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                            <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+                            <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+                        </svg>
+                        {{ details_recette.temps }}min -
+                        </p>
+                    <p>{{ details_recette.diff }}</p>
+                </div>
+                <div id="btn">
+                    <a href="{{ path('add_favorie', {id: details_recette.id})  }}">
+                        <input type="hidden" value="{{ details_recette.id }}">
+                        <button type="submit" id="like">
+                            Like
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </button>
+                    </a>
+                    <button id="partage">
+                        <input class="copyText" type="text" value="https://127.0.0.1:8001/recette/{{ details_recette.id }}" hidden>
+                        Partage
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                            <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="desc_ing_etape_com">
+                <!-- DESCRIPTION -->
+                <div id="desc">
+                    <div id="titre_ligne">
+                        <h2>Descriptions</h2>
+                        <hr>
+                    </div>
+                    <div id="contenue">
+                        <p>{{ details_recette.description }}</p>
+                    </div>
+                </div>
+                <!-- INGREDIENTS -->
+                <div id="btn_ing">
+                    <div id="titre_ligne">
+                        <h2>Ingrédients</h2>
+                        <hr>
+                    </div>
+                    <div id="btn_pers">
+                        <button class="btnPlus btn">+</button>
+                        <div id="pers">
+                            <p class="nbrPers">1</p>
+                            <p> personne(s)</p>
+                        </div>
+                        <button class="btnMoins btn">-</button>
+                    </div>
+                    <div id="all_ing">
+                        {% for compose in details_recette.composes %}
+                            <div class="ing">
+                                <img src="{{ compose.ingredient.image }}" alt="Photo ingredient">
+                                <div class="info">
+                                    <p class="titre">{{ compose.ingredient.nom }}</p>
+                                    <div class="qte_u">
+                                        <div class="qteIng" data-unite="{{ compose.qte }}">{{ compose.qte }}</div>
+                                        <p>{{ compose.unite }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- ETAPES -->
+                <div id="etapes">
+                    <div id="titre_ligne">
+                        <h2>Étapes</h2>
+                        <hr>
+                    </div>
+                    {% for etape in details_recette.etapes %}
+                        <div class="etape">
+                            <div class="titre_ing">
+                                <p>Étape {{ etape.numero }}</p>
+                                {% for etapeCompose in etape.etapeComposes %}
+                                    <img src="{{ etapeCompose.Ingredient.image }}" alt="Photo ingredient">
+                                {% endfor %}
+                            </div>
+                            <p class="contenue">{{ etape.contenue }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- COMMENTAIRES -->
+                <div id="commentaires">
+                    <div id="titre_ligne">
+                        <h2>Commentaires</h2>
+                        <hr>
+                    </div>
+                    <div id="all_com">
+                        {% for commentaire in details_recette.commentaires %}
+                            <div class="commentaire">
+                                <div class="pp_nom">
+                                    <img src="{{ commentaire.utilisateur.pp }}" alt="Photo de profil de l'utilisateur">
+                                    <p>{{ commentaire.utilisateur.nom }}</p>
+                                </div>
+                                <p class="contenue">{{ commentaire.contenue }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- RECETTES SIMILAIRES -->
+                <div id="recette_sim">
+                    <h2 id="titre">Recettes Similaires</h2>
+                    {% include "partials/_recette.html.twig" with { recettes: recettes_similaires } %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
